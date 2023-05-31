@@ -49,6 +49,9 @@ export default function Home() {
             priority
           />
         </div>
+        <p>
+           Wijitsinp Thichangthong
+        </p>
 
         <div className={styles.grid}>
           <a

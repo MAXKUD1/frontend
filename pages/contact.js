@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-export default function index() {
+export default function contact() {
   return(
     <>
     <Head>
@@ -53,52 +53,21 @@ export default function index() {
 
 
 <main>
-<div id="carouselExample" className="carousel slide">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <Image src="/view.jpg" className="d-block w-100" alt="view" width={400} height={800}/>
+<div class="container my-5">
+    <div class="bg-body-prinmary p-5 rounded">
+    <Image src="/me.jpg" className="bd-placeholder-img rounded-circle" alt="image" width={180} height={180}/>
+      <div class="col-sm-8 py-5 mx-auto">
+        <h1 class="display-5 fw-normal">สามารถติดต่อเราตามช่องทางดังนี้</h1>
+        <p class="fs-5">FB: Max Chan</p>
+        <p class="fs-5">Line: 083-5804997</p>
+        <p class="fs-5">contact: 082-4071948</p>
     </div>
-    <div className="carousel-item">
-      <Image src="/view2.jpg" className="d-block w-100" alt="view2" width={400} height={800}/>
-    </div>
-    <div className="carousel-item">
-      <Image src="/view3.jpg" className="d-block w-100" alt="view3" width={400} height={800}/>
     </div>
   </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true" />
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true" />
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-</main>
+    </main>
 
-<div className="container marketing">
-  {/* Three columns of text below the carousel */}
-  <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"></div>
-  <div className="row">
-    <div className="col-lg-4">
-    <Image src="/11.jpg" className="bd-placeholder-img rounded-circle" alt="11" width={140} height={140}/>
-      <h2 className="fw-normal">กล้องถ่ายรูป</h2>
-      <p>ความสวยงามและเลนส์กล้องที่คมชัด</p>
-      <p><a className="btn btn-secondary" href="#">View details »</a></p>
-    </div>{/* /.col-lg-4 */}
-    <div className="col-lg-4">
-    <Image src="/12.jpg" className="bd-placeholder-img rounded-circle" alt="12" width={140} height={140}/>
-      <h2 className="fw-normal">กล้องถ่ายรูป</h2>
-      <p>ใช้งานง่ายมีสายคล้องคอได้และสามารถพกพาได้ง่าย</p>
-      <p><a className="btn btn-secondary" href="#">View details »</a></p>
-    </div>{/* /.col-lg-4 */}
-    <div className="col-lg-4">
-    <Image src="/13.jpg" className="bd-placeholder-img rounded-circle" alt="13" width={140} height={140}/>
-      <h2 className="fw-normal">ถ่ายภาพ</h2>
-      <p>การถ่ายภาพนั้นสามารถถ่ายจากบุคคลใดก็ได้ทุกเพศทุกวัย</p>
-      <p><a className="btn btn-secondary" href="#">View details »</a></p>
-    </div>{/* /.col-lg-4 */}
-  </div>{/* /.row */}</div>
+
+
 
   <div>
   <div className="b-example" />
@@ -152,9 +121,9 @@ export default function index() {
       <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p>© 2023 Company, Inc. All rights reserved.</p>
         <ul className="list-unstyled d-flex">
-          <li className="ms-3"><Link className="link-body-emphasis" href="#"><svg className="bi" width={24} height={24}><use xlinkHref="#twitter" /></svg></Link></li>
-          <li className="ms-3"><Link className="link-body-emphasis" href="#"><svg className="bi" width={24} height={24}><use xlinkHref="#instagram" /></svg></Link></li>
-          <li className="ms-3"><Link className="link-body-emphasis" href="#"><svg className="bi" width={24} height={24}><use xlinkHref="#facebook" /></svg></Link></li>
+          <li className="ms-3"><a className="link-body-emphasis"Link href="#"><svg className="bi" width={24} height={24}><use xlinkHref="#twitter" /></svg></a></li>
+          <li className="ms-3"><a className="link-body-emphasis"Link href="#"><svg className="bi" width={24} height={24}><use xlinkHref="#instagram" /></svg></a></li>
+          <li className="ms-3"><a className="link-body-emphasis"Link href="#"><svg className="bi" width={24} height={24}><use xlinkHref="#facebook" /></svg></a></li>
         </ul>
       </div>
     </footer>

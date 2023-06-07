@@ -21,17 +21,17 @@ export default function contact() {
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <ul className="navbar-nav me-auto mb-2 mb-md-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page"Link href="/.">หน้าแรก</a>
+          <Link href="/"> หน้าแรก</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link"Link href="about">เกี่บวกับเรา</a>
+          <Link href="about"> เกี่ยวกับเรา</Link>
           </li>
           <li className="nav-item dropdown">
   <a className="nav-link dropdown-toggle"Link href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     บริการของเรา
   </a>
   <ul className="dropdown-menu">
-    <li><a className="dropdown-item"Link href="serve">บริการของเรา</a></li>
+  <Link href="serve"> บริการของเรา</Link>
     <li><a className="dropdown-item"Link href="#">Another action</a></li>
     <li><hr className="dropdown-divider" /></li>
     <li><a className="dropdown-item"Link href="#">Something else here</a></li>
@@ -39,7 +39,7 @@ export default function contact() {
 </li>
 
           <li className="nav-item">
-            <a className="nav-link "Link href="contact">ติดต่อเรา</a>
+          <Link href="contact"> ติดต่อเรา</Link>
           </li>
         </ul>
         <form className="d-flex" role="search">

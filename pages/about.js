@@ -31,7 +31,7 @@ export default function about() {
     บริการของเรา
   </a>
   <ul className="dropdown-menu">
-  <Link class="nav-link active" aria-current="page" href="serve"> บริการของเรา</Link>
+  <Link className="dropdown-item" href="serve"> บริการของเรา</Link>
     <li><a className="dropdown-item"Link href="#">Another action</a></li>
     <li><hr className="dropdown-divider" /></li>
     <li><a className="dropdown-item"Link href="#">Something else here</a></li>

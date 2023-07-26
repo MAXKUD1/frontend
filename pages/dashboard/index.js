@@ -1,14 +1,14 @@
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/user');
-  const posts = await res.json();
+  const res = await fetch('http://localhost:3000/api/users')
+  const posts = await res.json()
 
   return {
     props: {
       posts,
     },
-  };
+  }
 }
 
 export default function Component({ posts }) {

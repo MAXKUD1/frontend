@@ -26,14 +26,16 @@ export const authOptions = {
       ],
       secret: "LlKq6ZtYbr+hTC073mAmAh9/h2HwMfsFo4hrfCx5mLg=",
       callbacks: {
-        async jwt({ token, account }) {
+        async jwt({ token, account, user }) {
           if (account) {
             token.accessToken = account.access_token
+            token.user = user
           }
           return token
         },
         async session({ session, token, user }) {
           session.accessToken = token.accessToken
+          session.user = token.user
           return session
         }
       }

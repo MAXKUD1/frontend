@@ -1,0 +1,41 @@
+PostData
+1.  import { useRouter } from "next/router";
+2.  const router = useRouter();
+3. Function handleSubmit
+
+//----------------------start handleSubmit--------------------------
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const jsonData = {
+      studentid: data.get('txt_studentid'),
+      firstname: data.get('txt_firstname'),
+      lastname: data.get('txt_lastname'),
+      username: data.get('txt_username'),
+      password: data.get('txt_password'),
+      status: data.get('txt_status')
+    }
+
+      fetch(`http://localhost:3000/api/users`, {
+        method: 'POST', // or 'PUT'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status == 'ok') {
+          router.push('/dashboard')
+        } else {
+          console.log('Add Data Not Success')
+          router.push('/dashboard')
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+  }; //end handleSubmit
+//----------------------end handleSubmit--------------------------
+4. <form onSubmit={handleSubmit}>

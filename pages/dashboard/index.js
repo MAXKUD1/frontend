@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export async function getServerSideProps() {
-  const res = await fetch('https://8fd5-49-229-100-36.ngrok-free.app/api/users')
+  const res = await fetch('https://3710-49-229-100-36.ngrok-free.app/api/users')
   const posts = await res.json()
 
   return {
@@ -19,7 +19,7 @@ export default function Component({ posts }) {
 
   const handleDelete = async (id) => {
     //console.log("ID :", id);
-    fetch('https://8fd5-49-229-100-36.ngrok-free.app/api/users?id=' + id,{
+    fetch('https://3710-49-229-100-36.ngrok-free.app/api/users?id=' + id,{
     method: 'DELETE',
     })
     return router.reload('/dashboard')

@@ -28,7 +28,7 @@ export default function Component({ posts }) {
     //console.log("status :", jsonData.status);
 
    
-      fetch(`https://8fd5-49-229-100-36.ngrok-free.app/api/users`, {
+      fetch(`https://c10e-49-229-100-36.ngrok-free.app/api/users`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',

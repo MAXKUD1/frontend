@@ -19,7 +19,7 @@ export default function Component({ posts }) {
 
   const handleDelete = async (id) => {
     //console.log("ID :", id);
-    fetch('https://https://ed53-49-229-100-36.ngrok-free.app/api/users?id=' + id,{
+    fetch('https://ed53-49-229-100-36.ngrok-free.app/api/users?id=' + id,{
     method: 'DELETE',
     })
     return router.reload('/dashboard')

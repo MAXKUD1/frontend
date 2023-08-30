@@ -32,26 +32,26 @@ export default function Component({ posts }) {
     <header data-bs-theme="dark">
   <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div className="container-fluid">
-      { <a className="navbar-brand"><img src="/Angel of Death.png" width="80" height="60"></img>Angel of Death</a>}
-        { <form className="d-flex" role="search">
+      {/* <a className="navbar-brand"><img src="/Angel of Death.png" width="80" height="60"></img>Angel of Death</a> */}
+        {/* <form className="d-flex" role="search">
         <div align="right"> Signed in as {session.user.fname}  {session.user.lname} <button type="button" className="btn btn-danger" onClick={() => signOut()}>ออกจากระบบ</button> </div> 
          
           
-        </form> }
+        </form> */}
     </div>
   </nav>
 </header>
 <br>
 </br>
     <div className="col-md-auto">
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
            <div className="col">
         Signed in as {session.user.email} <br />
         {session.user.fname}  {session.user.lname} <br />
           </div>
         </div>
-      </div>
+      </div> */}
         <br></br>
       
         <br></br><br></br>

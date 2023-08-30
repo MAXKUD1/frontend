@@ -25,7 +25,7 @@ export default function Component({ posts }) {
     return router.reload('/dashboard')
   }
   
-  if (session) {
+  // if (session) {
     return (
       <>
       
@@ -108,4 +108,4 @@ export default function Component({ posts }) {
   //     <button onClick={() => signIn()}>Sign in</button> */}
   //   </>
   // )
-}
+// }

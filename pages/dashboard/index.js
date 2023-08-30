@@ -25,7 +25,7 @@ export default function Component({ posts }) {
     return router.reload('/dashboard')
   }
   
-  // if (session) {
+  if (session) {
     return (
       <>
       
@@ -44,14 +44,14 @@ export default function Component({ posts }) {
 <br>
 </br>
     <div className="col-md-auto">
-      {/* <div className="container">
+      <div className="container">
         <div className="row">
            <div className="col">
         Signed in as {session.user.email} <br />
         {session.user.fname}  {session.user.lname} <br />
           </div>
         </div>
-      </div> */}
+      </div>
         <br></br>
       
         <br></br><br></br>
@@ -108,4 +108,4 @@ export default function Component({ posts }) {
   //     <button onClick={() => signIn()}>Sign in</button> */}
   //   </>
   // )
-// }
+}

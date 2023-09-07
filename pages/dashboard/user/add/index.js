@@ -28,7 +28,7 @@ export default function Component({ posts }) {
     //console.log("status :", jsonData.status);
 
    
-      fetch(`https://ae69-49-229-100-36.ngrok-free.app/api/users`, {
+      fetch(`http://localhost:3000/api/users`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
@@ -51,15 +51,15 @@ export default function Component({ posts }) {
 
   }; //end handleSubmit
 //----------------------end handleSubmit--------------------------
-  // if (session) {
+  if (session) {
     return (
       <>
             <header data-bs-theme="dark">
             <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div className="container-fluid">
-              {/* <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="#">
               <a className="navbar-brand"><img src="/Angel of Death.png" width="80" height="60"></img>Angel of Death</a>
-              </a> */}
+              </a>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -75,8 +75,8 @@ export default function Component({ posts }) {
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
               >
-                {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                Signed In as {session.user.fname} {session.user.lname}
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                Signed In as {session.user.firstname} {session.user.lastname}
                 <span>&nbsp;</span>
                 <form className="d-flex" role="search">
                    <button
@@ -86,7 +86,7 @@ export default function Component({ posts }) {
                   >
                     ออกจากระบบ
                   </button> 
-                </form> */}
+                </form>
               </div>
             </div>
           </nav>
@@ -195,10 +195,10 @@ export default function Component({ posts }) {
       </>
     );
   }
-  // return (
-  //   <>
-  //     {/* Not signed in <br />
-  //     <button onClick={() => signIn()}>Sign in</button> */}
-  //   </>
-  // );
-// }
+  return (
+    <>
+      Not signed in <br />
+      <button onClick={() => signIn()}>Sign in</button>
+    </>
+  );
+}

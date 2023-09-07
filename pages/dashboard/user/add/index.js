@@ -28,7 +28,7 @@ export default function Component({ posts }) {
     //console.log("status :", jsonData.status);
 
    
-      fetch(`http://localhost:3000/api/users`, {
+      fetch(`frontend-eight-gray-66.vercel.app/api/users`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',

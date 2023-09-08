@@ -69,7 +69,7 @@ export default function Component({ posts }) {
                   </tr>
                 </thead>
                 <tbody>
-                  {posts.user.map((post) => (
+                  {posts.users.map((post) => (
                     <tr key={post.id}>
                       <td className="text-center">{post.id}</td>
                       <td className= "text-center">{post.studentid}</td>

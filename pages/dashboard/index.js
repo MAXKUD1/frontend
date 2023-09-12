@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export async function getServerSideProps() {
-  const res = await fetch('https://frontend-eight-gray-66.vercel.app/api/users/');
+  const res = await fetch('http://localhost:3000/api/users/');
   const posts = await res.json();
 
   return {
@@ -19,7 +19,7 @@ export default function Component({ posts }) {
 
   const handleDelete = async (id) => {
     //console.log("ID :", id);
-    fetch('https://frontend-eight-gray-66.vercel.app/api/users/' + id,{
+    fetch('http://localhost:3000/api/users/' + id,{
     method: 'DELETE',
     })
     return router.reload('/dashboard')
@@ -70,11 +70,12 @@ export default function Component({ posts }) {
                 </thead>
                 <tbody>
                   {posts.users.map((post) => (
+                    // className= "text-center"
                     <tr key={post.id}>
-                      <td className="text-center">{post.id}</td>
-                      <td className= "text-center">{post.studentid}</td>
-                      <td className= "text-center">{post.firstname}</td>
-                      <td className= "text-center">{post.lastname}</td>
+                      <td >{post.id}</td>
+                      <td >{post.studentid}</td>
+                      <td >{post.firstname}</td>
+                      <td >{post.lastname}</td>
                       <td>{post.username}</td>
                       <td>{post.password}</td>
                       <td>{post.status}</td>

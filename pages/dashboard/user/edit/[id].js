@@ -1,11 +1,10 @@
 import { useSession, signIn, signOut } from "next-auth/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export async function getServerSideProps(req) {
   const  { id }  = req.query
-  const res = await fetch('https://frontend-eight-gray-66.vercel.app/api/users/' + id, {
+  const res = await fetch('http://localhost:3000/api/users/' + id, {
     method: 'GET',
   })
   const posts = await res.json();
@@ -35,7 +34,7 @@ export default function Component({ posts }) {
       status: data.get('txt_status')
     }
 
-      fetch(`https://frontend-eight-gray-66.vercel.app/api/users`, {
+      fetch(`http://localhost:3000/api/users`, {
         method: 'PUT', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
